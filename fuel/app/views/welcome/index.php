@@ -10,8 +10,8 @@
 
 	<meta property="og:title" content="CartoDB Foursquare Heatmap" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="<?php echo Uri::base(false, false, true); ?>" />
-	<meta property="og:image" content="<?php echo Uri::base(false, false, true); ?>/assets/img/step-2.jpg" />
+	<meta property="og:url" content="https://cartodbfoursquareheatmap.herokuapp.com/" />
+	<meta property="og:image" content="https://cartodbfoursquareheatmap.herokuapp.com/assets/img/step-2.jpg" />
 	<meta property="og:site_name" content="CartoDB Foursquare Heatmap" />
 
 </head>
