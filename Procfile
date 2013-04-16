@@ -1,0 +1,1 @@
+web:    sh www/scripts/web-boot.sh
