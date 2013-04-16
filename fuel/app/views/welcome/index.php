@@ -6,6 +6,14 @@
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<?php echo Asset::css('bootstrap-responsive.css'); ?>
 	<?php echo Asset::css('main.css'); ?>
+
+
+	<meta property="og:title" content="CartoDB Foursquare Heatmap" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<?php echo Uri::base(false); ?>" />
+	<meta property="og:image" content="<?php echo Uri::base(false); ?>/assets/img/step-2.jpg" />
+	<meta property="og:site_name" content="CartoDB Foursquare Heatmap" />
+
 </head>
 <body>
 
@@ -27,10 +35,14 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
+                <li>
+                	<div style="display: inline-block; margin-right: 20px; margin-top: 15px;" class="fb-like" data-href="http://cartodbfoursquareheatmap.herokuapp.com/" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="dark"></div>
+                </li>
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="http://cartodb.com/" target="_blank">CartoDB.com</a></li> 
                 <li><a href="http://foursquare.com/" target="_blank">Foursquare.com</a></li> 
                 <li><a href="https://github.com/francimedia/cartoDB-Foursquare-Heatmap" target="_blank">Fork on Github</a></li>
+                
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -161,5 +173,14 @@
       }(window.jQuery)
     </script>
     <script src="/assets/js/holder.js"></script>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=506169639432441";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>    
   </body>
 </html>
