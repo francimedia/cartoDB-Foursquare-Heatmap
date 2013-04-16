@@ -3,15 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>CartoDB Foursquare Heatmap</title>
-	<?php echo Asset::css('bootstrap.css'); ?>
-	<?php echo Asset::css('bootstrap-responsive.css'); ?>
-	<?php echo Asset::css('main.css'); ?>
 
+		<link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/bootstrap-responsive.css" />
+		<link type="text/css" rel="stylesheet" href="/assets/css/main.css" />
 
 	<meta property="og:title" content="CartoDB Foursquare Heatmap" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="<?php echo Uri::base(false); ?>" />
-	<meta property="og:image" content="<?php echo Uri::base(false); ?>/assets/img/step-2.jpg" />
+	<meta property="og:url" content="<?php echo Uri::base(false, false, true); ?>" />
+	<meta property="og:image" content="<?php echo Uri::base(false, false, true); ?>/assets/img/step-2.jpg" />
 	<meta property="og:site_name" content="CartoDB Foursquare Heatmap" />
 
 </head>
@@ -36,7 +36,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li>
-                	<div style="display: inline-block; margin-right: 20px; margin-top: 15px;" class="fb-like" data-href="http://cartodbfoursquareheatmap.herokuapp.com/" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="dark"></div>
+                	<div style="display: inline-block; margin-right: 20px; margin-top: 15px;" class="fb-like" data-href="/" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="dark"></div>
                 </li>
                 <li class="active"><a href="#">Sources:</a></li>
                 <li><a href="http://cartodb.com/" target="_blank">CartoDB.com</a></li> 
