@@ -98,7 +98,7 @@ class Controller_Welcome extends Controller
 		}
 
 		// create a cache filename based on user access token
-	    $cache_filename = substr(md5($response->access_token),0,31).'.json';
+	    $cache_filename = substr(md5($response->access_token),0,32).'.json';
 
 	    // load data from cache if possible
 		try
