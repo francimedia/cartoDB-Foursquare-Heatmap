@@ -27,9 +27,9 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="http://cartodb.com/">CartoDB.com</a></li> 
-                <li><a href="http://foursquare.com/">Foursquare.com</a></li> 
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="http://cartodb.com/" target="_blank">CartoDB.com</a></li> 
+                <li><a href="http://foursquare.com/" target="_blank">Foursquare.com</a></li> 
                 <li><a href="https://github.com/francimedia/cartoDB-Foursquare-Heatmap" target="_blank">Fork on Github</a></li>
               </ul>
             </div><!--/.nav-collapse -->
@@ -67,7 +67,7 @@
           <img src="../assets/img/slide-03.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Share your map</h1>
+              <h1>Share your map <br />- if you are nuts :-)</h1>
               <?php include(dirname(__FILE__).'/_item.php'); ?>
             </div>
           </div>
@@ -76,8 +76,6 @@
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
-
-
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -94,7 +92,7 @@
           		Connect your Foursquare Account to our app, it will grab and convert your check-ins. Your check-in data is NOT stored in a database and just accessible for you.<br /><br />
           </p>
           <?php if(!isset($cache_filename)): ?>
-          <p><a class="btn" href="https://foursquare.com/oauth2/authenticate?client_id=3X13LKHOUSQBZEVOIKKCB1SZXOMM3CGDIVB2AOG5CSRGJSEZ&response_type=code&redirect_uri=<?php echo urlencode('http://'.$_SERVER['HTTP_HOST'].'/'); ?>">Login with Foursquare &raquo;</a></p>
+          <p><a class="btn" href="<?php echo $login_url; ?>">Login with Foursquare &raquo;</a></p>
           <?php endif; ?>
         </div><!-- /.span4 -->
         <div class="span4">
@@ -102,17 +100,19 @@
           <h2>2. Download GeoJSON</h2>
           <p>
           		After connecting your account we will offer you the possibilty to download your personal GeoJSON file - <strong>ready for CartoDB!</strong>
-          		Your download link will expire after 60mins.<br /><br />
+          		Your download link will expire after 60mins.<br /><br />          		
           </p>
           <?php if(isset($cache_filename)): ?>
-          <p><a class="btn" href="/welcome/download/<?php echo $cache_filename; ?>">Download your Check-in GeoJson File &raquo;</a></p>
+          <p><a class="btn" href="<?php echo Router::get('download', array('name' => $cache_filename)); ?>">Download your Check-in GeoJson File &raquo;</a></p>
       	  <?php endif; ?>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" src="/assets/img/step-3.jpg">
           <h2>3. Sign up at CartoDB</h2>
           <p>
-          	Create an account on CartoDB - it's free!<br />(for up to 5 tables...)<br /><br /><br />
+          	Create an account on CartoDB - it's free (for up to 5 tables...)!
+          	Next create a new table and upload your GeoJSON file.
+          	<br /><br /><br />
           </p>
           <p><a class="btn" href="http://cartodb.com/">Sign in or Sign up &raquo;</a></p>
         </div><!-- /.span4 -->

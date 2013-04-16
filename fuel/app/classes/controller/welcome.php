@@ -38,6 +38,8 @@ class Controller_Welcome extends Controller
 			$data['cache_filename'] = $this->createGeoJsonData($code);
 		}		
 
+		$data['login_url'] = 'https://foursquare.com/oauth2/authenticate?client_id=3X13LKHOUSQBZEVOIKKCB1SZXOMM3CGDIVB2AOG5CSRGJSEZ&response_type=code&redirect_uri='.urlencode(Uri::base(false));
+
 		return Response::forge(View::forge('welcome/index', $data));
 	}
 
