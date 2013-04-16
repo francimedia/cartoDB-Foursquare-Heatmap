@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>FuelPHP Framework</title>
+	<title>CartoDB Foursquare Heatmap</title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<style>
 		#logo{
@@ -29,36 +29,109 @@
 		a:hover{
 			color: #af4cf0;
 		}
-		.btn.btn-primary{color:#ffffff!important;background-color:#883ced;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#fd6ef7), to(#883ced));background-image:-moz-linear-gradient(top, #fd6ef7, #883ced);background-image:-ms-linear-gradient(top, #fd6ef7, #883ced);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6ef7), color-stop(100%, #883ced));background-image:-webkit-linear-gradient(top, #fd6ef7, #883ced);background-image:-o-linear-gradient(top, #fd6ef7, #883ced);background-image:linear-gradient(top, #fd6ef7, #883ced);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd6ef7', endColorstr='#883ced', GradientType=0);text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);border-color:#883ced #883ced #003f81;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-		body { margin: 0px 0px 40px 0px; }
+		.btn.btn-primary{
+			color:#ffffff!important;background-color:#883ced;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#fd6ef7), to(#883ced));background-image:-moz-linear-gradient(top, #fd6ef7, #883ced);background-image:-ms-linear-gradient(top, #fd6ef7, #883ced);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6ef7), color-stop(100%, #883ced));background-image:-webkit-linear-gradient(top, #fd6ef7, #883ced);background-image:-o-linear-gradient(top, #fd6ef7, #883ced);background-image:linear-gradient(top, #fd6ef7, #883ced);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd6ef7', endColorstr='#883ced', GradientType=0);text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);border-color:#883ced #883ced #003f81;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		}
+
+		body { 
+			margin: 0px 0px 40px 0px; 
+        	padding-top: 60px;
+        	padding-bottom: 40px;
+    	}
+
 	</style>
 </head>
 <body>
-	<div id="header">
-		<div class="row">
-			<div id="logo"></div>
-		</div>
-	</div>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">CartoDB Foursquare Heatmap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="https://github.com/francimedia/cartoDB-Foursquare-Heatmap" target="_blank">Fork on Github</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
 	<div class="container">
 		<div class="hero-unit">
-			<h1>Welcome!</h1>
-			<p>You have successfully installed the FuelPHP Framework.</p>
-			<p><a class="btn btn-primary btn-large" href="http://docs.fuelphp.com">Read the Docs</a></p>
+			<h1>CartoDB Foursquare Heatmap</h1>
+			<br />
+			<?php if(isset($cache_filename)): ?>
+			<p>
+				Your heatmap file is ready!
+			</p>
+			<p>
+				<a href="/welcome/download/<?php echo $cache_filename; ?>">Download your Check-in GeoJson File</a>
+			</p>
+			<?php else: ?>
+			<p>Create your personal checkin heatmap using cartoDB & Foursquare.</p>
+			<p><a class="btn btn-primary btn-large" href="https://foursquare.com/oauth2/authenticate?client_id=3X13LKHOUSQBZEVOIKKCB1SZXOMM3CGDIVB2AOG5CSRGJSEZ&response_type=code&redirect_uri=<?php echo urlencode('http://'.$_SERVER['HTTP_HOST'].'/'); ?>">
+				Login with Foursquare
+			</a></p>
+			<?php endif; ?>
 		</div>
+
+
+		<div class="media">
+		  <a class="pull-left" href="#">
+		    <img class="media-object" data-src="holder.js/64x64">
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading">Media heading</h4>
+		    ...
+		 
+		    <!-- Nested media object -->
+		    <div class="media">
+		      ...
+		    </div>
+		  </div>
+		</div>
+
 		<div class="row">
 			<div class="span4">
-				<h2>Get Started</h2>
+				<h2>1. Login with Foursquare</h2>
 				<p>The controller generating this page is found at <code>APPPATH/classes/controller/welcome.php</code>.</p>
 				<p>This view can be found at <code>APPPATH/views/welcome/index.php</code>.</p>
 				<p>You can modify these files to get your application started quickly.</p>
 			</div>
 			<div class="span4">
-				<h2>Learn</h2>
+				<h2>2. Download GeoJSON</h2>
 				<p>The best way to learn FuelPHP is reading through the <a href="http://docs.fuelphp.com">Documentation</a>.</p>
 				<p>Another good resource is the <a href="http://fuelphp.com/forums">Forums</a>.  They are fairly active, and you can usually get a response quickly.</p>
 			</div>
 			<div class="span4">
-				<h2>Contribute</h2>
+				<h2>3. Sign up at CartoDB</h2>
+				<p>FuelPHP wouldn't exist without awesome contributions from the community.  Use the links below to get contributing.</p>
+				<ul>
+					<li><a href="http://docs.fuelphp.com/general/coding_standards.html">Coding Standards</a></li>
+					<li><a href="http://github.com/fuel/fuel">GitHub Respository</a></li>
+					<li><a href="http://fuelphp.com/contribute/issue-tracker">Issue Tracker</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span4">
+				<h2>4. Import GeoJSON</h2>
+				<p>FuelPHP wouldn't exist without awesome contributions from the community.  Use the links below to get contributing.</p>
+				<ul>
+					<li><a href="http://docs.fuelphp.com/general/coding_standards.html">Coding Standards</a></li>
+					<li><a href="http://github.com/fuel/fuel">GitHub Respository</a></li>
+					<li><a href="http://fuelphp.com/contribute/issue-tracker">Issue Tracker</a></li>
+				</ul>
+			</div>
+			<div class="span5">
+				<h2>5. Share map</h2>
 				<p>FuelPHP wouldn't exist without awesome contributions from the community.  Use the links below to get contributing.</p>
 				<ul>
 					<li><a href="http://docs.fuelphp.com/general/coding_standards.html">Coding Standards</a></li>
