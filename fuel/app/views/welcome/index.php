@@ -36,7 +36,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li>
-                	<div style="display: inline-block; margin-right: 20px; margin-top: 15px;" class="fb-like" data-href="/" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="dark"></div>
+                	<div style="display: inline-block; margin-right: 20px; margin-top: 15px;" class="fb-like" data-href="https://cartodbfoursquareheatmap.herokuapp.com/" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="dark"></div>
                 </li>
                 <li class="active"><a href="#">Sources:</a></li>
                 <li><a href="http://cartodb.com/" target="_blank">CartoDB.com</a></li> 
