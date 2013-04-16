@@ -38,7 +38,7 @@
                 <li>
                 	<div style="display: inline-block; margin-right: 20px; margin-top: 15px;" class="fb-like" data-href="http://cartodbfoursquareheatmap.herokuapp.com/" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false" data-colorscheme="dark"></div>
                 </li>
-                <li class="active"><a href="/">Home</a></li>
+                <li class="active"><a href="#">Sources:</a></li>
                 <li><a href="http://cartodb.com/" target="_blank">CartoDB.com</a></li> 
                 <li><a href="http://foursquare.com/" target="_blank">Foursquare.com</a></li> 
                 <li><a href="https://github.com/francimedia/cartoDB-Foursquare-Heatmap" target="_blank">Fork on Github</a></li>
