@@ -92,7 +92,7 @@ class Controller_Welcome extends Controller
 		$this->FoursquareClient = new \Foursquare\Client;
 
 		// get locations surrounding lat/lng geo point.
-		$response = $this->FoursquareClient->get('getAccessToken', $code, 'authorization_code', 'http://'.$_SERVER['HTTP_HOST'].'/');
+		$response = $this->FoursquareClient->get('getAccessToken', $code, 'authorization_code', 'https://cartodbfoursquareheatmap.herokuapp.com/');
 		if(!isset($response->access_token)) {
 			return false;
 		}
