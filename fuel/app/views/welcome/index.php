@@ -156,8 +156,11 @@
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>
-        	Made with love by <a href="http://about.me/stephanalber" target="_blank">Stephan Alber</a> |
-        	<em> This project is NOT affiliated with CartoDB / Foursquare</em>
+        	Made with love by <a href="http://about.me/stephanalber" target="_blank">Stephan Alber</a> &nbsp;&nbsp;&nbsp;|
+        	<a href="http://www.foursquare.com"><img src="/assets/img/foursquare.png" style="width: 200px;" alt="Powered by Foursquare" /></a> |
+        	<a href="http://www.cartodb.com"><img src="/assets/img/logoCartoDB.png" style="width: 100px;" alt="Powered by CartoDB" /></a> |
+        	<em>&nbsp;&nbsp; This project is NOT affiliated with CartoDB / Foursquare</em>
+
         </p>
       </footer>
 
