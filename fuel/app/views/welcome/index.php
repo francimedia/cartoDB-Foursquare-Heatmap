@@ -155,7 +155,10 @@
       <br />
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p><em> This project is NOT affiliated with CartoDB / Foursquare</em></p>
+        <p>
+        	Made with love by <a href="http://about.me/stephanalber" target="_blank">Stephan Alber</a> |
+        	<em> This project is NOT affiliated with CartoDB / Foursquare</em>
+        </p>
       </footer>
 
     </div><!-- /.container -->
@@ -183,7 +186,7 @@
 	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=506169639432441";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>    
-	
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
